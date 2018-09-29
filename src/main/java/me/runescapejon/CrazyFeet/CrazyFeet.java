@@ -726,20 +726,17 @@ public class CrazyFeet {
 	}
 
 
-	public void Cloud(Player player) {
-			World world = player.getWorld();
-			world.spawnParticles(
-					ParticleEffect.builder().type(ParticleTypes.CLOUD).build(),
-					player.getLocation().getPosition().add(0, 2.5, 0));
-			world.spawnParticles(
-					ParticleEffect.builder().type(ParticleTypes.CLOUD).build(),
-					player.getLocation().getPosition().add(0.2, 2.5, 0.2));
-			world.spawnParticles(
-					ParticleEffect.builder().type(ParticleTypes.CLOUD).build(),
-					player.getLocation().getPosition().add(0, 2.5, 0.4));
-			world.spawnParticles(
-					ParticleEffect.builder().type(ParticleTypes.CLOUD).build(),
-					player.getLocation().getPosition().add(0.4, 2.5, 0));
+	private void Cloud(Player player) {
+	    cloudMath(player,0,2.5,0);
+            cloudMath(player,0.2, 2.5, 0.2);
+	    cloudMath(player,0, 2.5, 0.4);
+	    cloudMath(player,0.4, 2.5, 0);
+	}
+	private void cloudMath(Player player, double x, double y, double z) {
+		World world = player.getWorld();
+		world.spawnParticles(
+		        ParticleEffect.builder().type(ParticleTypes.CLOUD).build(),
+		        player.getLocation().getPosition().add(x, y, z));
 	}
 	
 
