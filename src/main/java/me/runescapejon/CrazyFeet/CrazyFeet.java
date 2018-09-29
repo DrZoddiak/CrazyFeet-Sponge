@@ -745,7 +745,7 @@ public class CrazyFeet {
 
 // this here is basically so i can test and do a bit of math
 	//so i can add new particle animation and things like that you can ignore this
-	public void test(Player player) {
+/*	public void test(Player player) {
 		for (int degree = 90; degree < 360; degree++) {
 			double radians = Math.toRadians(degree);
 			double x = Math.cos(radians);
@@ -776,5 +776,6 @@ public class CrazyFeet {
 							.option(ParticleOptions.COLOR, Color.ofRgb(254, 33, 254)).build(),
 					player.getLocation().getPosition().add(x, 0.1, z));
 		}
-	}
+	} 
+	*/
 }
